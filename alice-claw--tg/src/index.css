@@ -31,11 +31,11 @@
   }
 
   .tg-header {
-    @apply h-16 bg-tg-header backdrop-blur-md flex items-center px-4 border-b border-tg-border sticky top-0 z-50 pt-4;
+    @apply h-24 bg-tg-header backdrop-blur-md flex items-center px-4 border-b border-tg-border sticky top-0 z-50 pt-10;
   }
 
   .tg-keyboard {
-    @apply grid grid-cols-2 gap-2 p-3 bg-black/90 backdrop-blur-md border-t border-tg-border rounded-t-2xl px-4 pb-8;
+    @apply grid grid-cols-2 gap-2 p-3 bg-black/90 backdrop-blur-md border-t border-tg-border rounded-t-2xl px-4 pb-10;
   }
 
   .tg-chat-area {
@@ -61,10 +61,6 @@
 
   .tg-input-area {
     @apply p-3 bg-black/80 backdrop-blur-sm border-t border-tg-border;
-  }
-
-  .tg-keyboard {
-    @apply grid grid-cols-2 gap-2 p-3 bg-black/90 backdrop-blur-md border-t border-tg-border rounded-t-2xl px-4;
   }
 
   .tg-keyboard-btn {
