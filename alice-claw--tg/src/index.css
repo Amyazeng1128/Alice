@@ -22,7 +22,9 @@
 
 @layer components {
   .tg-container {
-    @apply max-w-[500px] mx-auto h-screen flex flex-col bg-black relative shadow-2xl;
+    @apply mx-auto h-screen flex flex-col bg-black relative shadow-2xl;
+    width: 100%;
+    max-width: calc(100vh * (9 / 16));
   }
 
   .tg-header {
@@ -79,4 +81,3 @@
 ::-webkit-scrollbar-thumb {
   @apply bg-tg-border rounded-full;
 }
-
