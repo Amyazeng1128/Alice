@@ -22,16 +22,18 @@
 
 @layer components {
   .tg-container {
-    @apply mx-auto h-[96vh] my-[2vh] flex flex-col bg-black relative shadow-[0_0_60px_rgba(0, 0, 0, 0.5)] overflow-hidden;
+    @apply mx-auto h-[96vh] my-[2vh] flex flex-col bg-black relative overflow-hidden;
     width: 100%;
     /* iPhone 16/17 Pro series aspect ratio is 19.5:9 */
     max-width: calc(96vh * (9 / 19.5));
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
     border: 8px solid #1a1a1a;
     border-radius: 48px;
   }
 
   .tg-header {
-    @apply h-48 bg-tg-header backdrop-blur-md flex items-end pb-6 px-4 border-b border-tg-border sticky top-0 z-50;
+    @apply bg-tg-header backdrop-blur-md flex flex-col justify-end pb-10 px-4 border-b border-tg-border sticky top-0 z-50;
+    height: 240px;
   }
 
   .tg-keyboard {
