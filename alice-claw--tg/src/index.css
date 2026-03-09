@@ -32,8 +32,8 @@
   }
 
   .tg-header {
-    @apply bg-tg-header backdrop-blur-md flex flex-col justify-end pb-10 px-4 border-b border-tg-border sticky top-0 z-50;
-    height: 240px;
+    @apply bg-tg-header backdrop-blur-md flex flex-col justify-end pb-4 px-4 border-b border-tg-border sticky top-0 z-50;
+    height: 130px;
   }
 
   .tg-keyboard {
