@@ -639,7 +639,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
-            <span className="text-[12px] font-bold">交易执行中...</span>
+            <span className="text-[14px] font-bold">交易执行中...</span>
           </div>
         );
       }
@@ -656,7 +656,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'welcome-actions':
         return (
           <div className="space-y-3">
-            <p className="text-[13px] font-bold leading-relaxed">{msg.text}</p>
+            <p className="text-[15px] font-bold leading-relaxed">{msg.text}</p>
             <div className="space-y-1.5">
               <button
                 onClick={() => handleSend('获取最新信号')}
@@ -666,8 +666,8 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
                   <BarChart3 size={16} className="text-tg-text-muted group-hover:text-tg-accent transition-colors" />
                 </div>
                 <div>
-                  <div className="text-[12px] font-bold">获取最新信号</div>
-                  <div className="text-[10px] text-tg-text-muted">获取当前 AI 评分最高聪明钱信号</div>
+                  <div className="text-[14px] font-bold">获取最新信号</div>
+                  <div className="text-[12px] text-tg-text-muted">获取当前 AI 评分最高聪明钱信号</div>
                 </div>
               </button>
               <button
@@ -678,8 +678,8 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
                   <Search size={16} className="text-tg-text-muted group-hover:text-tg-accent transition-colors" />
                 </div>
                 <div>
-                  <div className="text-[12px] font-bold">解读信号</div>
-                  <div className="text-[10px] text-tg-text-muted">解释交易信号的含义和逻辑</div>
+                  <div className="text-[14px] font-bold">解读信号</div>
+                  <div className="text-[12px] text-tg-text-muted">解释交易信号的含义和逻辑</div>
                 </div>
               </button>
               <button
@@ -690,8 +690,8 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
                   <Lightbulb size={16} className="text-tg-text-muted group-hover:text-tg-accent transition-colors" />
                 </div>
                 <div>
-                  <div className="text-[12px] font-bold">学习知识</div>
-                  <div className="text-[10px] text-tg-text-muted">学习预测市场的基础知识和策略</div>
+                  <div className="text-[14px] font-bold">学习知识</div>
+                  <div className="text-[12px] text-tg-text-muted">学习预测市场的基础知识和策略</div>
                 </div>
               </button>
               <button
@@ -702,13 +702,13 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
                   <Rocket size={16} className="text-tg-text-muted group-hover:text-tg-accent transition-colors" />
                 </div>
                 <div>
-                  <div className="text-[12px] font-bold">执行交易</div>
-                  <div className="text-[10px] text-tg-text-muted">一键跟单，快速参与市场</div>
+                  <div className="text-[14px] font-bold">执行交易</div>
+                  <div className="text-[12px] text-tg-text-muted">一键跟单，快速参与市场</div>
                 </div>
               </button>
             </div>
             {msg.data?.footer && (
-              <p className="text-[13px] font-bold leading-relaxed">{msg.data.footer}</p>
+              <p className="text-[15px] font-bold leading-relaxed">{msg.data.footer}</p>
             )}
           </div>
         );
@@ -716,25 +716,25 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'market-analysis':
         return (
           <div className="space-y-3">
-            <h3 className="text-[14px] font-bold">{msg.text}</h3>
+            <h3 className="text-[16px] font-bold">{msg.text}</h3>
             <div className="space-y-2">
-              <div className="text-[12px] font-bold text-tg-text-muted">当前热度 Top 3 板块：</div>
+              <div className="text-[14px] font-bold text-tg-text-muted">当前热度 Top 3 板块：</div>
               {msg.data.segments.map((seg: any, i: number) => (
                 <div key={i} className="p-2 bg-tg-header border border-tg-border rounded-lg space-y-1">
                   <div className="flex justify-between items-center">
-                    <span className="text-[12px] font-bold">{seg.name}</span>
-                    <span className="text-[10px] text-orange-500 font-bold">热度：🔥 {seg.heat}</span>
+                    <span className="text-[14px] font-bold">{seg.name}</span>
+                    <span className="text-[12px] text-orange-500 font-bold">热度：🔥 {seg.heat}</span>
                   </div>
-                  <p className="text-[11px] text-tg-text-muted leading-snug">{seg.desc}</p>
+                  <p className="text-[13px] text-tg-text-muted leading-snug">{seg.desc}</p>
                 </div>
               ))}
             </div>
             <div className="p-2 bg-tg-bubble border border-tg-border rounded-lg space-y-1">
-              <div className="text-[12px] font-bold">聪明钱动向：</div>
-              <p className="text-[11px] leading-relaxed">{msg.data.smartMoney}</p>
+              <div className="text-[14px] font-bold">聪明钱动向：</div>
+              <p className="text-[13px] leading-relaxed">{msg.data.smartMoney}</p>
             </div>
             {msg.data.footer && (
-              <p className="text-[12px] text-tg-accent font-medium">{msg.data.footer}</p>
+              <p className="text-[14px] text-tg-accent font-medium">{msg.data.footer}</p>
             )}
           </div>
         );
@@ -744,27 +744,27 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               <BarChart3 size={20} className="text-tg-text-muted" />
-              <h3 className="text-[14px] font-bold">{msg.text}</h3>
+              <h3 className="text-[16px] font-bold">{msg.text}</h3>
             </div>
 
             <div className="p-3 bg-tg-header border border-tg-border rounded-lg space-y-3">
-              <h4 className="text-[12px] font-bold">市场概况</h4>
+              <h4 className="text-[14px] font-bold">市场概况</h4>
               <div className="grid grid-cols-2 gap-y-2 gap-x-3">
                 <div>
-                  <div className="text-[10px] text-tg-text-muted mb-0.5">当前价格:</div>
-                  <div className="text-[12px] font-medium">{msg.data.overview.price}</div>
+                  <div className="text-[12px] text-tg-text-muted mb-0.5">当前价格:</div>
+                  <div className="text-[14px] font-medium">{msg.data.overview.price}</div>
                 </div>
                 <div>
-                  <div className="text-[10px] text-tg-text-muted mb-0.5">24h 变化:</div>
-                  <div className="text-[12px] font-medium text-emerald-500">{msg.data.overview.change}</div>
+                  <div className="text-[12px] text-tg-text-muted mb-0.5">24h 变化:</div>
+                  <div className="text-[14px] font-medium text-emerald-500">{msg.data.overview.change}</div>
                 </div>
                 <div>
-                  <div className="text-[10px] text-tg-text-muted mb-0.5">交易量:</div>
-                  <div className="text-[12px] font-medium">{msg.data.overview.volume}</div>
+                  <div className="text-[12px] text-tg-text-muted mb-0.5">交易量:</div>
+                  <div className="text-[14px] font-medium">{msg.data.overview.volume}</div>
                 </div>
                 <div>
-                  <div className="text-[10px] text-tg-text-muted mb-0.5">持仓量:</div>
-                  <div className="text-[12px] font-medium">{msg.data.overview.oi}</div>
+                  <div className="text-[12px] text-tg-text-muted mb-0.5">持仓量:</div>
+                  <div className="text-[14px] font-medium">{msg.data.overview.oi}</div>
                 </div>
               </div>
             </div>
@@ -772,11 +772,11 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
             <div className="space-y-3">
               <div className="flex items-center gap-2">
                 <LayoutGrid size={18} className="text-tg-text-muted" />
-                <h4 className="text-[12px] font-bold">最新新闻</h4>
+                <h4 className="text-[14px] font-bold">最新新闻</h4>
               </div>
               <ul className="space-y-2 pl-1">
                 {msg.data.news.map((item: any, idx: number) => (
-                  <li key={idx} className="flex items-start gap-2 text-[12px] leading-snug">
+                  <li key={idx} className="flex items-start gap-2 text-[14px] leading-snug">
                     <span className="text-tg-text-muted mt-1">•</span>
                     <span>{item.text} <span className="text-tg-text-muted">({item.time})</span></span>
                   </li>
@@ -791,15 +791,15 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               <BarChart3 size={20} className="text-rose-500" />
-              <h3 className="text-[14px] font-bold text-rose-500">{msg.text}</h3>
+              <h3 className="text-[16px] font-bold text-rose-500">{msg.text}</h3>
             </div>
             <div className="space-y-2">
               {msg.data.positions.map((pos: any, idx: number) => (
                 <div key={idx} className="p-3 bg-tg-header border border-tg-border rounded-lg space-y-2">
                   <div className="flex justify-between items-center">
-                    <span className="text-[13px] font-bold">{pos.name} {pos.change}</span>
+                    <span className="text-[15px] font-bold">{pos.name} {pos.change}</span>
                   </div>
-                  <div className="grid grid-cols-2 gap-y-1.5 text-[11px]">
+                  <div className="grid grid-cols-2 gap-y-1.5 text-[13px]">
                     <div className="text-tg-text-muted">持仓: <span className="text-tg-text font-medium">{pos.holding}</span></div>
                     <div className="text-tg-text-muted">入场: <span className="text-tg-text font-medium">{pos.entry}</span></div>
                     <div className="text-tg-text-muted">当前: <span className="text-tg-text font-medium">{pos.current}</span></div>
@@ -809,7 +809,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
               ))}
             </div>
             <div className="pt-2">
-              <span className="text-[14px] font-bold">总盈亏 <span className="text-tg-text">{msg.data.totalPnl}</span></span>
+              <span className="text-[16px] font-bold">总盈亏 <span className="text-tg-text">{msg.data.totalPnl}</span></span>
             </div>
           </div>
         );
@@ -819,9 +819,9 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               <CheckSquare size={20} className="text-rose-500" />
-              <h3 className="text-[14px] font-bold text-rose-500">{msg.text}</h3>
+              <h3 className="text-[16px] font-bold text-rose-500">{msg.text}</h3>
             </div>
-            <div className="space-y-2 text-[12px]">
+            <div className="space-y-2 text-[14px]">
               <div className="flex gap-2">
                 <span className="text-tg-text-muted">市场:</span>
                 <span className="font-medium">{msg.data.market}</span>
@@ -841,13 +841,13 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'tariff-analysis':
         return (
           <div className="space-y-3 -m-0.5">
-            <p className="text-[13px] font-bold text-white mb-2">{msg.text}</p>
+            <p className="text-[15px] font-bold text-white mb-2">{msg.text}</p>
             <div className="bg-white/10 rounded-lg p-3 space-y-2 border border-white/10">
-              <div className="flex items-center gap-2 text-[12px] font-bold text-white">
+              <div className="flex items-center gap-2 text-[14px] font-bold text-white">
                 <BarChart3 size={16} />
                 <span>找到 3 个相关市场:</span>
               </div>
-              <ul className="space-y-1.5 text-[11px] text-white/90">
+              <ul className="space-y-1.5 text-[13px] text-white/90">
                 {msg.data.markets.map((m: string, i: number) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="mt-1">•</span>
@@ -856,13 +856,13 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
                 ))}
               </ul>
             </div>
-            <p className="text-[12px] font-medium text-white/90 leading-relaxed">
+            <p className="text-[14px] font-medium text-white/90 leading-relaxed">
               {msg.data.analysis}
             </p>
             <div className="flex gap-1.5 pt-1">
-              <button className="flex-1 py-1.5 bg-white/20 hover:bg-white/30 rounded-full text-[10px] font-bold text-white transition-colors">查看详情</button>
-              <button className="flex-1 py-1.5 bg-white/20 hover:bg-white/30 rounded-full text-[10px] font-bold text-white transition-colors">一键交易</button>
-              <button className="flex-1 py-1.5 bg-white/20 hover:bg-white/30 rounded-full text-[10px] font-bold text-white transition-colors">加入观察</button>
+              <button className="flex-1 py-1.5 bg-white/20 hover:bg-white/30 rounded-full text-[12px] font-bold text-white transition-colors">查看详情</button>
+              <button className="flex-1 py-1.5 bg-white/20 hover:bg-white/30 rounded-full text-[12px] font-bold text-white transition-colors">一键交易</button>
+              <button className="flex-1 py-1.5 bg-white/20 hover:bg-white/30 rounded-full text-[12px] font-bold text-white transition-colors">加入观察</button>
             </div>
           </div>
         );
@@ -870,16 +870,16 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'probability-reasoning':
         return (
           <div className="space-y-3 -m-0.5">
-            <p className="text-[13px] font-bold text-white mb-2">{msg.text}</p>
+            <p className="text-[15px] font-bold text-white mb-2">{msg.text}</p>
             <div className="space-y-2">
               {msg.data.reasons.map((r: any, i: number) => (
                 <div key={i} className="flex items-start gap-2">
-                  <div className="w-5 h-5 rounded-md bg-white/20 flex items-center justify-center shrink-0 text-[10px] font-bold text-white">
+                  <div className="w-5 h-5 rounded-md bg-white/20 flex items-center justify-center shrink-0 text-[12px] font-bold text-white">
                     {i + 1}
                   </div>
                   <div className="space-y-0.5">
-                    <div className="text-[12px] font-bold text-white">{r.title}:</div>
-                    <div className="text-[11px] text-white/80 leading-snug">{r.desc}</div>
+                    <div className="text-[14px] font-bold text-white">{r.title}:</div>
+                    <div className="text-[13px] text-white/80 leading-snug">{r.desc}</div>
                   </div>
                 </div>
               ))}
@@ -890,17 +890,17 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'risk-reward-analysis':
         return (
           <div className="space-y-3 -m-0.5">
-            <div className="flex items-center gap-2 text-[13px] font-bold text-white mb-0.5">
+            <div className="flex items-center gap-2 text-[15px] font-bold text-white mb-0.5">
               <span>📈</span>
               <span>{msg.text}</span>
             </div>
             <div className="bg-white/10 rounded-lg overflow-hidden border border-white/10">
               <div className="px-3 py-1.5 bg-white/10 border-bottom border-white/10">
-                <span className="text-[12px] font-bold text-white">{msg.data.scenario}</span>
+                <span className="text-[14px] font-bold text-white">{msg.data.scenario}</span>
               </div>
               <div className="p-3 space-y-2">
                 {msg.data.metrics.map((m: any, i: number) => (
-                  <div key={i} className="flex justify-between items-center text-[11px]">
+                  <div key={i} className="flex justify-between items-center text-[13px]">
                     <span className="text-white/70">{m.label}:</span>
                     <span className="font-bold text-white">{m.value}</span>
                   </div>
@@ -919,26 +919,26 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
               </div>
             )}
 
-            <div className="text-[14px] font-bold text-white mb-2">
+            <div className="text-[16px] font-bold text-white mb-2">
               {msg.text}
             </div>
 
-            <div className="space-y-2 text-[12px] text-white">
+            <div className="space-y-2 text-[14px] text-white">
               <div className="font-bold text-white/50">市场概况：</div>
               <div className="text-white/80 leading-relaxed">{msg.data.overview}</div>
             </div>
 
-            <div className="space-y-2 text-[12px] text-white">
+            <div className="space-y-2 text-[14px] text-white">
               <div className="font-bold text-white/50">AI 洞察：</div>
               <div className="text-white/80 leading-relaxed">{msg.data.aiInsight}</div>
             </div>
 
-            <div className="space-y-2 text-[12px] text-white break-all">
+            <div className="space-y-2 text-[14px] text-white break-all">
               <div className="font-bold text-white/50">账户地址：</div>
-              <div className="text-emerald-400 font-mono text-[11px] underline cursor-pointer">{msg.data.address}</div>
+              <div className="text-emerald-400 font-mono text-[13px] underline cursor-pointer">{msg.data.address}</div>
             </div>
 
-            <div className="flex gap-2 pt-2 text-[12px]">
+            <div className="flex gap-2 pt-2 text-[14px]">
               <button
                 onClick={() => handleSend(`trade_${msg.data.tradeId}`)}
                 className="flex-[2] py-2 bg-tg-accent hover:bg-tg-accent/80 rounded font-bold text-white transition-colors flex items-center justify-center gap-1"
@@ -958,11 +958,11 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'learning-hub':
         return (
           <div className="space-y-3 -m-0.5">
-            <div className="flex items-center gap-2 text-[13px] font-bold text-white mb-0.5">
+            <div className="flex items-center gap-2 text-[15px] font-bold text-white mb-0.5">
               <span>💡</span>
               <span>{msg.text}</span>
             </div>
-            <p className="text-[12px] text-white/80">{msg.data.subtitle}</p>
+            <p className="text-[14px] text-white/80">{msg.data.subtitle}</p>
 
             <div className="space-y-2.5">
               {msg.data.levels.map((level: any, i: number) => (
@@ -972,10 +972,10 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
                   className="w-full text-left p-2.5 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors group"
                 >
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[14px]">{level.icon}</span>
-                    <span className="text-[12px] font-bold text-white group-hover:text-tg-accent transition-colors">{level.title}</span>
+                    <span className="text-[16px]">{level.icon}</span>
+                    <span className="text-[14px] font-bold text-white group-hover:text-tg-accent transition-colors">{level.title}</span>
                   </div>
-                  <p className="text-[11px] text-white/60 leading-snug pl-6">{level.desc}</p>
+                  <p className="text-[13px] text-white/60 leading-snug pl-6">{level.desc}</p>
                 </button>
               ))}
             </div>
@@ -983,13 +983,13 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
             <div className="flex gap-1.5 pt-1">
               <button
                 onClick={() => handleSend('开始阅读第一课')}
-                className="flex-1 py-1.5 bg-white/10 hover:bg-white/20 rounded-full text-[11px] font-bold text-white transition-colors flex items-center justify-center gap-1.5"
+                className="flex-1 py-1.5 bg-white/10 hover:bg-white/20 rounded-full text-[13px] font-bold text-white transition-colors flex items-center justify-center gap-1.5"
               >
                 <span>📖 开始阅读第一课</span>
               </button>
               <button
                 onClick={() => handleSend('向 AI 提问')}
-                className="flex-1 py-1.5 bg-white/10 hover:bg-white/20 rounded-full text-[11px] font-bold text-white transition-colors flex items-center justify-center gap-1.5"
+                className="flex-1 py-1.5 bg-white/10 hover:bg-white/20 rounded-full text-[13px] font-bold text-white transition-colors flex items-center justify-center gap-1.5"
               >
                 <span>❓ 向 AI 提问</span>
               </button>
@@ -1000,10 +1000,10 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'trade-prepare':
         return (
           <div className="space-y-3 -m-0.5">
-            <div className="flex items-center gap-2 text-[14px] font-bold text-white mb-2 pb-2 border-b border-white/10">
+            <div className="flex items-center gap-2 text-[16px] font-bold text-white mb-2 pb-2 border-b border-white/10">
               <span>{msg.text}</span>
             </div>
-            <div className="space-y-2 text-[12px] bg-white/5 p-3 rounded-lg border border-white/10">
+            <div className="space-y-2 text-[14px] bg-white/5 p-3 rounded-lg border border-white/10">
               <div className="flex justify-between">
                 <span className="font-bold text-white">目标：</span>
                 <span className="font-bold text-white">{msg.data.market}</span>
@@ -1024,7 +1024,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
                   <button
                     key={i}
                     onClick={() => handleSend(amt, msg.id)}
-                    className="py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg font-bold text-[13px] text-white transition-colors flex justify-center items-center"
+                    className="py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg font-bold text-[15px] text-white transition-colors flex justify-center items-center"
                   >
                     {amt}
                   </button>
@@ -1033,7 +1033,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
 
               <button
                 onClick={() => handleSend(`取消交易_${msg.data.tradeId}`, msg.id)}
-                className="w-full py-2 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg font-bold text-[13px] text-white/80 transition-colors flex justify-center items-center"
+                className="w-full py-2 bg-white/5 hover:bg-white/10 border border-white/5 rounded-lg font-bold text-[15px] text-white/80 transition-colors flex justify-center items-center"
               >
                 ❌ 取消本次跟单
               </button>
@@ -1044,12 +1044,12 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'trade-success':
         return (
           <div className="space-y-3 -m-0.5">
-            <div className="flex items-center gap-2 text-[14px] font-bold text-emerald-400 pb-2 border-b border-white/10">
+            <div className="flex items-center gap-2 text-[16px] font-bold text-emerald-400 pb-2 border-b border-white/10">
               <span>✅</span>
               <span>{msg.text}</span>
             </div>
 
-            <div className="space-y-1.5 text-[12px] bg-white/5 p-3 rounded-lg border border-white/10">
+            <div className="space-y-1.5 text-[14px] bg-white/5 p-3 rounded-lg border border-white/10">
               <div className="flex justify-between">
                 <span className="font-bold text-white">已买入：</span>
                 <span className="text-white">{msg.data.shares}</span>
@@ -1061,12 +1061,12 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
             </div>
 
             <div className="p-2.5 bg-emerald-500/10 border border-emerald-500/20 rounded-lg mt-2">
-              <p className="text-[12px] text-emerald-400 font-bold">
+              <p className="text-[14px] text-emerald-400 font-bold">
                 {msg.data.stopLoss}
               </p>
             </div>
 
-            <div className="flex gap-2 pt-2 text-[12px]">
+            <div className="flex gap-2 pt-2 text-[14px]">
               <button
                 onClick={() => handleSend('查看持仓', msg.id)}
                 className="flex-[2] py-2 bg-white/10 hover:bg-white/20 rounded font-bold text-white transition-colors flex items-center justify-center gap-1"
@@ -1086,17 +1086,17 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'wallet-overview':
         return (
           <div className="space-y-3 -m-0.5 animate-fade-in w-full min-w-[240px]">
-            <div className="flex items-center gap-2 text-[15px] font-bold text-white mb-2 pb-3 border-b border-white/20">
+            <div className="flex items-center gap-2 text-[17px] font-bold text-white mb-2 pb-3 border-b border-white/20">
               <span>💼</span>
               <span>{msg.text}</span>
             </div>
 
             <div className="space-y-1 pb-3 border-b border-white/20">
-              <div className="text-[14px] flex items-center gap-1.5 font-bold text-white">
+              <div className="text-[16px] flex items-center gap-1.5 font-bold text-white">
                 <span>💵</span>
                 <span>余额</span>
               </div>
-              <div className="pl-6 text-[14px] text-white">
+              <div className="pl-6 text-[16px] text-white">
                 <span>交易钱包：</span>
                 <span className="font-bold">{msg.data.balance}</span>
               </div>
@@ -1106,32 +1106,32 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => handleSend('查看持仓')}
-                  className="py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[14px] transition-colors flex items-center justify-center gap-2"
+                  className="py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[16px] transition-colors flex items-center justify-center gap-2"
                 >
                   📊 我的持仓
                 </button>
                 <button
                   onClick={() => handleSend('交易记录')}
-                  className="py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[14px] transition-colors flex items-center justify-center gap-2"
+                  className="py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[16px] transition-colors flex items-center justify-center gap-2"
                 >
                   📜 交易记录
                 </button>
                 <button
                   onClick={() => handleSend('充值')}
-                  className="py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[14px] transition-colors flex items-center justify-center gap-2"
+                  className="py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[16px] transition-colors flex items-center justify-center gap-2"
                 >
                   💰 充值
                 </button>
                 <button
                   onClick={() => handleSend('提现')}
-                  className="py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[14px] transition-colors flex items-center justify-center gap-2"
+                  className="py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[16px] transition-colors flex items-center justify-center gap-2"
                 >
                   💸 提现
                 </button>
               </div>
               <button
                 onClick={() => handleSend('钱包')}
-                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[14px] transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[16px] transition-colors flex items-center justify-center gap-2"
               >
                 🔄 刷新
               </button>
@@ -1142,13 +1142,13 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'settings-menu':
         return (
           <div className="space-y-3 -m-0.5 animate-fade-in w-full min-w-[240px]">
-            <div className="flex items-center gap-2 text-[15px] font-bold text-white mb-2 pb-3 border-b border-white/20">
+            <div className="flex items-center gap-2 text-[17px] font-bold text-white mb-2 pb-3 border-b border-white/20">
               <span>⚙️</span>
               <span>{msg.text}</span>
             </div>
 
             <div className="space-y-1 pb-4 pt-1 border-b border-white/20">
-              <div className="text-[14px] flex items-center justify-between text-white pt-1">
+              <div className="text-[16px] flex items-center justify-between text-white pt-1">
                 <div className="flex items-center gap-1.5 font-bold">
                   <span>🏀</span>
                   <span>体育赛事信号</span>
@@ -1160,7 +1160,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
               </div>
             </div>
 
-            <div className="text-[12px] text-white/80 pb-3 pt-2 leading-relaxed flex gap-1.5 items-start">
+            <div className="text-[14px] text-white/80 pb-3 pt-2 leading-relaxed flex gap-1.5 items-start">
               <span>💡</span>
               <span>包含 NBA、NFL、足球等体育赛事相关的预测市场</span>
             </div>
@@ -1168,25 +1168,25 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
             <div className="pt-1 space-y-2">
               <button
                 onClick={() => handleSend('Switch to English')}
-                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[14px] transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[16px] transition-colors flex items-center justify-center gap-2"
               >
                 🌐 Switch to English
               </button>
               <button
                 onClick={() => handleSend('开启体育信号')}
-                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[14px] transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[16px] transition-colors flex items-center justify-center gap-2"
               >
                 🏈 开启体育信号
               </button>
               <button
                 onClick={() => handleSend('取消订阅')}
-                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[14px] transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[16px] transition-colors flex items-center justify-center gap-2"
               >
                 🔕 取消订阅
               </button>
               <button
                 onClick={() => handleSend('最新信号')}
-                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[14px] transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[16px] transition-colors flex items-center justify-center gap-2"
               >
                 « 返回主控台
               </button>
@@ -1197,34 +1197,34 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'agent-status':
         return (
           <div className="space-y-3 -m-0.5 animate-fade-in w-full min-w-[260px]">
-            <div className="flex items-center gap-2 text-[15px] font-bold text-white mb-2 pb-3 border-b border-white/20">
+            <div className="flex items-center gap-2 text-[17px] font-bold text-white mb-2 pb-3 border-b border-white/20">
               <span>🤖</span>
               <span>{msg.text}</span>
             </div>
 
             <div className="space-y-2">
-              <div className="text-[13px] font-bold text-white mb-1">📡 正在运行的任务 (2)：</div>
-              <div className="bg-white/5 p-2.5 rounded-lg border border-white/10 space-y-2 text-[12px] text-white/90">
+              <div className="text-[15px] font-bold text-white mb-1">📡 正在运行的任务 (2)：</div>
+              <div className="bg-white/5 p-2.5 rounded-lg border border-white/10 space-y-2 text-[14px] text-white/90">
                 <div className="flex items-start gap-1.5">
                   <span className="mt-0.5">🟢</span>
                   <div>
                     <span className="font-bold text-white">深度监控：</span>特朗普关税政策
-                    <div className="text-white/60 text-[11px] mt-0.5">(概率 {'>'} 70% 触发分析)</div>
+                    <div className="text-white/60 text-[13px] mt-0.5">(概率 {'>'} 70% 触发分析)</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-1.5">
                   <span className="mt-0.5">🟢</span>
                   <div>
                     <span className="font-bold text-white">自动跟单：</span>胜率 {'>'} 65% 地址
-                    <div className="text-white/60 text-[11px] mt-0.5">(单笔限额 $50)</div>
+                    <div className="text-white/60 text-[13px] mt-0.5">(单笔限额 $50)</div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="space-y-2 pt-2">
-              <div className="text-[13px] font-bold text-white mb-1">✨ 为你推荐的新指令：</div>
-              <div className="space-y-2 text-[12px] text-white/90">
+              <div className="text-[15px] font-bold text-white mb-1">✨ 为你推荐的新指令：</div>
+              <div className="space-y-2 text-[14px] text-white/90">
                 <div className="bg-white/5 p-2.5 rounded-lg border border-white/5 leading-relaxed">
                   <span className="font-bold text-tg-accent mr-1">1️⃣ 风险预警：</span>
                   当 聪明钱 在 2026 世界杯 市场大额反向建仓时提醒我。
@@ -1240,20 +1240,20 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => handleSend('管理运行中任务')}
-                  className="py-2.5 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[13px] transition-colors flex items-center justify-center gap-1"
+                  className="py-2.5 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[15px] transition-colors flex items-center justify-center gap-1"
                 >
                   🛠 管理运行中任务
                 </button>
                 <button
                   onClick={() => handleSend('创建自定义指令')}
-                  className="py-2.5 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[13px] transition-colors flex items-center justify-center gap-1"
+                  className="py-2.5 bg-white/10 hover:bg-white/20 border border-white/5 rounded-xl font-bold text-white text-[15px] transition-colors flex items-center justify-center gap-1"
                 >
                   ➕ 创建自定义指令
                 </button>
               </div>
               <button
                 onClick={() => handleSend('查看更多推荐')}
-                className="w-full py-2.5 bg-tg-accent/10 border border-tg-accent/20 hover:bg-tg-accent/20 text-tg-accent rounded-xl font-bold text-[13px] transition-colors flex items-center justify-center gap-1"
+                className="w-full py-2.5 bg-tg-accent/10 border border-tg-accent/20 hover:bg-tg-accent/20 text-tg-accent rounded-xl font-bold text-[15px] transition-colors flex items-center justify-center gap-1"
               >
                 🔍 查看更多推荐
               </button>
@@ -1264,11 +1264,11 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'agent-recommendations':
         return (
           <div className="space-y-3 -m-0.5 animate-fade-in w-full min-w-[260px]">
-            <div className="flex items-center gap-2 text-[15px] font-bold text-white mb-2 pb-3 border-b border-white/20">
+            <div className="flex items-center gap-2 text-[17px] font-bold text-white mb-2 pb-3 border-b border-white/20">
               <span>{msg.text}</span>
             </div>
 
-            <div className="space-y-2 text-[13px] text-white/90">
+            <div className="space-y-2 text-[15px] text-white/90">
               <div className="bg-white/5 p-3 rounded-lg border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">
                 <div className="flex gap-2 items-start">
                   <span className="mt-0.5">🔸</span>
@@ -1301,13 +1301,13 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
             <div className="pt-2 space-y-2">
               <button
                 onClick={() => handleSend('确认开启', msg.id)}
-                className="w-full py-3 bg-tg-accent hover:bg-tg-accent/80 rounded-xl font-bold text-white text-[14px] transition-colors flex items-center justify-center gap-1"
+                className="w-full py-3 bg-tg-accent hover:bg-tg-accent/80 rounded-xl font-bold text-white text-[16px] transition-colors flex items-center justify-center gap-1"
               >
                 ⚡️ 激活选中的推荐
               </button>
               <button
                 onClick={() => handleSend('任务管理', msg.id)}
-                className="w-full py-3 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl font-bold text-white text-[14px] transition-colors flex items-center justify-center gap-1"
+                className="w-full py-3 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl font-bold text-white text-[16px] transition-colors flex items-center justify-center gap-1"
               >
                 🔙 返回
               </button>
@@ -1318,9 +1318,9 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'agent-custom-confirm':
         return (
           <div className="space-y-3 -m-0.5 animate-fade-in w-full min-w-[260px]">
-            <div className="text-[13px] text-white mb-2 leading-relaxed">
+            <div className="text-[15px] text-white mb-2 leading-relaxed">
               <span className="font-bold text-white opacity-80">{msg.text}</span><br />
-              <div className="mt-1.5 p-2 bg-white/10 rounded border border-white/5 font-mono text-[11px] text-emerald-400">
+              <div className="mt-1.5 p-2 bg-white/10 rounded border border-white/5 font-mono text-[13px] text-emerald-400">
                 监控 "{msg.data.instruction}"
               </div>
               <div className="mt-2 text-white/80">是否现在开启？</div>
@@ -1329,13 +1329,13 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
             <div className="grid grid-cols-2 gap-2 pt-1">
               <button
                 onClick={() => handleSend('确认开启', msg.id)}
-                className="py-2.5 bg-tg-accent hover:bg-tg-accent/80 rounded-lg font-bold text-white text-[13px] transition-colors flex items-center justify-center gap-1"
+                className="py-2.5 bg-tg-accent hover:bg-tg-accent/80 rounded-lg font-bold text-white text-[15px] transition-colors flex items-center justify-center gap-1"
               >
                 ✅ 确认开启
               </button>
               <button
                 onClick={() => handleSend('取消交易_0', msg.id)}
-                className="py-2.5 bg-white/10 hover:bg-white/20 border border-white/5 rounded-lg font-bold text-white text-[13px] transition-colors flex items-center justify-center gap-1"
+                className="py-2.5 bg-white/10 hover:bg-white/20 border border-white/5 rounded-lg font-bold text-white text-[15px] transition-colors flex items-center justify-center gap-1"
               >
                 ❌ 取消
               </button>
@@ -1346,33 +1346,33 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'portfolio-overview':
         return (
           <div className="space-y-3 -m-0.5 animate-fade-in">
-            <div className="flex items-center gap-2 text-[14px] font-bold text-white mb-2 pb-2 border-b border-white/10">
+            <div className="flex items-center gap-2 text-[16px] font-bold text-white mb-2 pb-2 border-b border-white/10">
               <span>💼</span>
               <span>{msg.text}</span>
             </div>
 
             <div className="grid grid-cols-2 gap-2">
               <div className="bg-white/5 p-3 rounded-lg border border-white/10">
-                <div className="text-[11px] text-white/50 mb-1">总账户余额</div>
-                <div className="text-[18px] font-black text-white">{msg.data.totalBalance}</div>
+                <div className="text-[13px] text-white/50 mb-1">总账户余额</div>
+                <div className="text-[20px] font-black text-white">{msg.data.totalBalance}</div>
               </div>
               <div className="bg-white/5 p-3 rounded-lg border border-white/10">
-                <div className="text-[11px] text-white/50 mb-1">24h 盈亏</div>
-                <div className="text-[18px] font-black text-emerald-400">🟢 {msg.data.pnl24h}</div>
+                <div className="text-[13px] text-white/50 mb-1">24h 盈亏</div>
+                <div className="text-[20px] font-black text-emerald-400">🟢 {msg.data.pnl24h}</div>
               </div>
             </div>
 
             <div className="space-y-2 pt-1">
-              <div className="text-[12px] font-bold text-white/60 uppercase tracking-wider mb-2">当前持仓详情</div>
+              <div className="text-[14px] font-bold text-white/60 uppercase tracking-wider mb-2">当前持仓详情</div>
               {msg.data.positions.map((pos: any, idx: number) => (
                 <div key={idx} className="bg-tg-header border border-tg-border p-3 rounded-lg space-y-2.5">
                   <div className="flex justify-between items-start">
-                    <div className="text-[13px] font-bold text-white flex-1 pr-2 leading-tight">{pos.title}</div>
-                    <div className={`text-[13px] font-bold shrink-0 ${pos.isPositive ? 'text-emerald-400' : 'text-tg-accent'}`}>
+                    <div className="text-[15px] font-bold text-white flex-1 pr-2 leading-tight">{pos.title}</div>
+                    <div className={`text-[15px] font-bold shrink-0 ${pos.isPositive ? 'text-emerald-400' : 'text-tg-accent'}`}>
                       {pos.isPositive ? '🟢 ' : '🔴 '}{pos.pnl}
                     </div>
                   </div>
-                  <div className="flex gap-2 pt-1 text-[11px]">
+                  <div className="flex gap-2 pt-1 text-[13px]">
                     <button
                       onClick={() => handleSend(`设置止损_${pos.id}`, msg.id)}
                       className="flex-1 py-2 bg-white/10 hover:bg-white/20 rounded font-bold text-white transition-colors flex justify-center items-center gap-1"
@@ -1393,13 +1393,13 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
             <div className="pt-2 flex gap-2">
               <button
                 onClick={() => handleSend('最新信号', msg.id)}
-                className="flex-1 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded font-bold text-[12px] text-white transition-colors flex items-center justify-center gap-1"
+                className="flex-1 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded font-bold text-[14px] text-white transition-colors flex items-center justify-center gap-1"
               >
                 <span>⬅️ 返回工作台</span>
               </button>
               <button
                 onClick={() => handleSend('刷新持仓', msg.id)}
-                className="flex-[2] py-2 bg-tg-accent/10 hover:bg-tg-accent/20 border border-tg-accent/20 rounded font-bold text-[12px] text-tg-accent transition-colors flex items-center justify-center gap-1"
+                className="flex-[2] py-2 bg-tg-accent/10 hover:bg-tg-accent/20 border border-tg-accent/20 rounded font-bold text-[14px] text-tg-accent transition-colors flex items-center justify-center gap-1"
               >
                 <span>🔄 刷新实时数据</span>
               </button>
@@ -1410,13 +1410,13 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'latest-signals':
         return (
           <div className="space-y-3 -m-0.5 animate-fade-in">
-            <div className="text-[13px] font-bold text-white mb-2">
+            <div className="text-[15px] font-bold text-white mb-2">
               {msg.text}
             </div>
 
             <div className="space-y-2">
-              <div className="text-[12px] font-bold text-white/50 bg-white/5 px-2 py-1 rounded w-max">[热门预测]</div>
-              <div className="space-y-2 pl-1 text-[12px] text-white">
+              <div className="text-[14px] font-bold text-white/50 bg-white/5 px-2 py-1 rounded w-max">[热门预测]</div>
+              <div className="space-y-2 pl-1 text-[14px] text-white">
                 {msg.data.hotPredictions?.map((pred: any, i: number) => (
                   <div key={i} className="flex flex-col gap-0.5">
                     <div className="font-bold">{pred.title}</div>
@@ -1429,8 +1429,8 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
             <div className="h-[1px] bg-white/10 w-full my-2" />
 
             <div className="space-y-2">
-              <div className="text-[12px] font-bold text-white/50 bg-white/5 px-2 py-1 rounded w-max">[聪明钱异动]</div>
-              <div className="space-y-2 pl-1 text-[12px] text-white">
+              <div className="text-[14px] font-bold text-white/50 bg-white/5 px-2 py-1 rounded w-max">[聪明钱异动]</div>
+              <div className="space-y-2 pl-1 text-[14px] text-white">
                 {msg.data.smartMoney?.map((sm: any, i: number) => (
                   <div key={i} className="flex flex-col gap-0.5">
                     <div className="font-bold">{sm.id}. {sm.account}</div>
@@ -1440,7 +1440,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
               </div>
             </div>
 
-            <div className="pt-3 space-y-2 text-[12px]">
+            <div className="pt-3 space-y-2 text-[14px]">
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => handleSend('decode_1')}
@@ -1481,12 +1481,12 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
         return (
           <div className="space-y-3">
             <div className="space-y-2 text-white">
-              <div className="flex items-center gap-2 text-[13px] font-bold">
+              <div className="flex items-center gap-2 text-[15px] font-bold">
                 <span>📈</span>
                 <span>{msg.text}</span>
               </div>
 
-              <div className="space-y-1.5 text-[12px]">
+              <div className="space-y-1.5 text-[14px]">
                 <div className="flex items-center gap-2">
                   <span>🎯</span>
                   <span>买入 {msg.data.direction || msg.data.recommendation} @ {msg.data.price}</span>
@@ -1503,7 +1503,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
 
               <div className="h-[1px] bg-white/10 w-full my-2" />
 
-              <div className="flex items-center gap-2 text-[11px] text-white/60">
+              <div className="flex items-center gap-2 text-[13px] text-white/60">
                 <span>⚠️</span>
                 <span>预测市场有风险，非投资建议</span>
               </div>
@@ -1525,7 +1525,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
                 onClick={() => handleSend('买入')}
                 className="tg-action-btn"
               >
-                <span className="text-xs">💰</span>
+                <span className="text-sm">💰</span>
                 <span>跟单</span>
               </button>
             </div>
@@ -1535,18 +1535,18 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       case 'feedback-recorded':
         return (
           <div className="space-y-1.5 -m-0.5 animate-fade-in">
-            <div className="flex items-center gap-1.5 text-[14px] font-bold text-emerald-400">
-              <span className="text-sm">✅</span>
+            <div className="flex items-center gap-1.5 text-[16px] font-bold text-emerald-400">
+              <span className="text-base">✅</span>
               <span>{msg.text}</span>
             </div>
-            <div className="text-[12px] text-white/80 leading-relaxed bg-white/5 p-2 rounded-lg border border-white/5">
+            <div className="text-[14px] text-white/80 leading-relaxed bg-white/5 p-2 rounded-lg border border-white/5">
               💡 {msg.data.insight}
             </div>
           </div>
         );
 
       default:
-        return <p className="text-[13px] leading-relaxed whitespace-pre-wrap">{msg.text}</p>;
+        return <p className="text-[15px] leading-relaxed whitespace-pre-wrap">{msg.text}</p>;
     }
   };
 
@@ -1563,7 +1563,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
               <div className={`tg-bubble ${msg.type === 'user' ? 'tg-bubble-user' : 'tg-bubble-ai'}`}>
                 {renderMessageContent(msg)}
               </div>
-              <div className={`text-[9px] text-white/40 mt-1 mb-2 ${msg.type === 'user' ? 'mr-1' : 'ml-1'}`}>
+              <div className={`text-[11px] text-white/40 mt-1 mb-2 ${msg.type === 'user' ? 'mr-1' : 'ml-1'}`}>
                 {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </div>
             </div>
@@ -1590,7 +1590,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
                   }
                 }}
                 placeholder="输入消息..."
-                className="flex-1 bg-transparent border-none focus:outline-none text-[13px] text-white placeholder:text-white/30"
+                className="flex-1 bg-transparent border-none focus:outline-none text-[15px] text-white placeholder:text-white/30"
               />
               <button className="text-white/40 hover:text-white transition-colors">
                 <LayoutGrid size={18} />
@@ -1609,28 +1609,28 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
           onClick={() => handleSend('最新信号')}
           className="tg-keyboard-btn"
         >
-          <span className="text-xl">📋</span>
+          <span className="text-2xl">📋</span>
           <span>最新信号</span>
         </button>
         <button
           onClick={() => handleSend('钱包')}
           className="tg-keyboard-btn"
         >
-          <span className="text-xl">💰</span>
+          <span className="text-2xl">💰</span>
           <span>钱包</span>
         </button>
         <button
           onClick={() => handleSend('设置')}
           className="tg-keyboard-btn"
         >
-          <span className="text-xl">⚙️</span>
+          <span className="text-2xl">⚙️</span>
           <span>设置</span>
         </button>
         <button
           onClick={() => handleSend('alice claw')}
           className="tg-keyboard-btn"
         >
-          <span className="text-xl">📊</span>
+          <span className="text-2xl">📊</span>
           <span>Alice Claw</span>
         </button>
       </div>

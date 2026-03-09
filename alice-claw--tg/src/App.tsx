@@ -48,20 +48,20 @@ export default function App() {
           <div className="flex items-center w-full justify-between">
             <button
               onClick={() => setActiveView('chat')}
-              className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white transition-all hover:bg-white/20"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white transition-all hover:bg-white/20"
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft size={22} />
             </button>
 
             <div className="flex flex-col items-center">
               <div className="flex items-center gap-1">
-                <h1 className="text-[13px] font-bold text-white">Alice Claw</h1>
-                <Settings size={12} className="text-white/40" />
+                <h1 className="text-[15px] font-bold text-white">Alice Claw</h1>
+                <Settings size={14} className="text-white/40" />
               </div>
-              <p className="text-[9px] text-white/40">机器人</p>
+              <p className="text-[11px] text-white/40">机器人</p>
             </div>
 
-            <div className="w-8 h-8 rounded-full overflow-hidden border border-white/10">
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10">
               <img
                 src="https://i.postimg.cc/BQs8Hdpt/c403beb885997a465b2c38b1120e6c16.png"
                 alt="User"
