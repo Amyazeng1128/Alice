@@ -319,7 +319,7 @@ const ChatView: React.FC<ChatViewProps> = ({ onViewChange }) => {
       };
     }
 
-    if (normalizedInput === 'alice claw' || normalizedInput === '任务管理' || normalizedInput === '返回主控台' || normalizedInput === '执行交易' || normalizedInput === '/agent') {
+    if (normalizedInput === 'alice claw' || normalizedInput === '任务管理' || normalizedInput === '返回主控台' || normalizedInput === '/agent') {
       return {
         id,
         type: 'ai',
