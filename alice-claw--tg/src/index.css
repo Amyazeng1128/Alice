@@ -31,7 +31,7 @@
   }
 
   .tg-header {
-    @apply h-24 bg-tg-header backdrop-blur-md flex items-center px-4 border-b border-tg-border sticky top-0 z-50 pt-10;
+    @apply h-28 bg-tg-header backdrop-blur-md flex items-end pb-3 px-4 border-b border-tg-border sticky top-0 z-50;
   }
 
   .tg-keyboard {
