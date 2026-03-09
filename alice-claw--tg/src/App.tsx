@@ -43,6 +43,11 @@ export default function App() {
   return (
     <div className="min-h-screen bg-black flex items-center justify-center">
       <div className="tg-container">
+        {/* Mock Dynamic Island */}
+        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-28 h-7 bg-black rounded-full z-[60] border border-white/5 flex items-center justify-center pointer-events-none">
+          <div className="w-1.5 h-1.5 rounded-full bg-blue-500/20 mr-1" />
+        </div>
+
         {/* Telegram Header */}
         <header className="tg-header">
           <div className="flex items-center w-full justify-between">
