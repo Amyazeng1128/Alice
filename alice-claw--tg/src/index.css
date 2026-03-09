@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-tg-bg: #000000;
+  --color-tg-header: rgba(28, 28, 29, 0.7);
+  --color-tg-bubble: #212121;
+  --color-tg-ai-bubble: linear-gradient(135deg, #2d2438 0%, #1a1a1a 100%);
+  --color-tg-input: #1c1c1d;
+  --color-tg-accent: #3390ec;
+  --color-tg-text: #ffffff;
+  --color-tg-text-muted: #aaaaaa;
+  --color-tg-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-black text-tg-text antialiased overflow-hidden;
+  }
+}
+
+@layer components {
+  .tg-container {
+    @apply max-w-[500px] mx-auto h-screen flex flex-col bg-black relative shadow-2xl;
+  }
+
+  .tg-header {
+    @apply h-12 bg-tg-header backdrop-blur-md flex items-center px-3 border-b border-tg-border sticky top-0 z-50;
+  }
+
+  .tg-chat-area {
+    @apply flex-1 overflow-y-auto p-2 space-y-4 scroll-smooth;
+    background-image: url('https://i.postimg.cc/KzjM2SRH/C3489F1A-5631-48C0-BEA3-B726AD822757.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .tg-bubble {
+    @apply rounded-xl p-2.5 max-w-[85%] sm:max-w-[340px] w-fit break-words shadow-lg relative border border-white/5 overflow-hidden;
+  }
+
+  .tg-bubble-user {
+    @apply bg-tg-accent self-end rounded-br-none;
+  }
+
+  .tg-bubble-ai {
+    @apply self-start rounded-bl-none;
+    background: var(--color-tg-ai-bubble);
+  }
+
+  .tg-input-area {
+    @apply p-1.5 bg-black/80 backdrop-blur-sm border-t border-tg-border;
+  }
+
+  .tg-keyboard {
+    @apply grid grid-cols-2 gap-1.5 p-1.5 bg-black/90 backdrop-blur-md border-t border-tg-border rounded-t-2xl;
+  }
+
+  .tg-keyboard-btn {
+    @apply flex items-center justify-center gap-1.5 py-1.5 bg-white/10 rounded-xl text-[13px] font-bold hover:bg-white/20 transition-all border border-white/5;
+  }
+
+  .tg-action-btn {
+    @apply flex-1 py-1.5 bg-white/10 rounded-lg text-[11px] font-bold text-center hover:bg-white/20 transition-all border border-white/5 flex items-center justify-center gap-1.5;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-tg-border rounded-full;
+}
+
